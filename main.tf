@@ -11,15 +11,15 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
   region     = "us-east-1"
-  access_key = "AKIA3Y3S4W3IYO27WSXA"
-  secret_key = "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"
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
 }
 
 resource "aws_s3_bucket" "test_bucket" {
-  bucket = "hh-test-bucket-001"
+  bucket = "hh-test-bucket-002"
   acl    = "private"
 
   tags = {
-    Name = "State File Bucket"
+    Name = "State File Bucket2"
   }
 }
