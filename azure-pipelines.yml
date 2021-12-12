@@ -36,7 +36,7 @@ steps:
     command: 'init'
     backendServiceAWS: 'azdo-aws-sc'
     backendAWSBucketName: 'aws-s3-bucket-test-state'
-    backendAWSKey: 'terraform.tfstate'
+    backendAWSKey: 'terraform-azdo.tfstate'
 
 - task: TerraformTaskV2@2
   inputs:
